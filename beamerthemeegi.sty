@@ -5,11 +5,11 @@
 \newdimen\head@height
 \head@height=42pt
 
-\definecolor{egi_blueI}{RGB}{43,81,154}
-\definecolor{egi_blue}{RGB}{0,103,167}
-\setbeamercolor{section in head}{fg=white,bg=egi_blue}
-\setbeamercolor{egi in head}{fg=white,bg=egi_blue}
-\setbeamercolor{date in foot}{fg=white,bg=egi_blue}
+\definecolor{egiblueI}{RGB}{43,81,154}
+\definecolor{egiblue}{RGB}{0,103,167}
+\setbeamercolor{section in head}{fg=white,bg=egiblue}
+\setbeamercolor{egi in head}{fg=white,bg=egiblue}
+\setbeamercolor{date in foot}{fg=white,bg=egiblue}
 
 \setbeamertemplate{navigation symbols}{}
 
@@ -30,12 +30,13 @@
     \begin{beamercolorbox}[wd=\paperwidth,ht=\headI,dp=10pt]{section in head}
         \hfill\textbf{\insertframetitle\ }
     \end{beamercolorbox}
-    \begin{beamercolorbox}[wd=\paperwidth,ht=6pt,dp=5pt]{egi in head}
-        \vbox to 7pt{
+    \vspace{-1pt}
+    \begin{beamercolorbox}[wd=\paperwidth,ht=6pt,dp=3pt]{egi in head}
+        \vbox to 6pt{
             \hsize=\wd\logobox
             \vss\leavevmode\lower1pt\copy\logobox\par
         }
-        \tiny\hskip1em EGI-InSPIRE
+            \hfill\tiny\hskip1em \insertframesubtitle \quad \strut
     \end{beamercolorbox}
 }
 
@@ -48,14 +49,14 @@
     \end{beamercolorbox}
 }
 
-\setbeamercolor{normal text}{fg=egi_blueI}
+%\setbeamercolor{normal text}{fg=egiblueI}
 
-\setbeamercolor{alerted text}{fg=egi_blue!90!black}
+\setbeamercolor{alerted text}{fg=egiblue!90!black}
 \setbeamerfont{alerted text}{series=\bfseries}
 
-\setbeamertemplate{itemize item}{{\color{egi_blue}$\bullet$}}
-\setbeamertemplate{itemize subitem}{{\color{egi_blue}\textbf{--}}}
-\setbeamertemplate{itemize subsubitem}{{\color{egi_blue}$\scriptstyle\blacktriangleright$}}
+\setbeamertemplate{itemize item}{{\color{egiblue}$\bullet$}}
+\setbeamertemplate{itemize subitem}{{\color{egiblue}\textbf{--}}}
+\setbeamertemplate{itemize subsubitem}{{\color{egiblue}$\scriptstyle\blacktriangleright$}}
 
 \setbeamertemplate{background}{\ifnum\thepage=1\relax
 \includegraphics[height=\paperheight]{images/back.png}\fi}
