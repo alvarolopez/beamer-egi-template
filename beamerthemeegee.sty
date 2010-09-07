@@ -1,0 +1,96 @@
+\ProvidesPackage{beamerthemeegi}
+
+\mode<presentation>
+
+\newdimen\head@height
+\head@height=42pt
+
+\definecolor{egi_blueI}{RGB}{43,81,154}
+\definecolor{egi_blue}{RGB}{0,103,167}
+\setbeamercolor{section in head}{fg=white,bg=egi_blue}
+\setbeamercolor{egi in head}{fg=white,bg=egi_blue}
+\setbeamercolor{date in foot}{fg=white,bg=egi_blue}
+
+\setbeamertemplate{navigation symbols}{}
+
+\newbox\logobox
+\setbox\logobox\hbox{\includegraphics[height=\head@height]{images/egi.png}}
+
+\defbeamertemplate*{headline}{egi theme}{\hrule height0pt depth0pt}
+
+\newdimen\headI
+
+\defbeamertemplate*{frametitle}{egi theme} {
+    \nointerlineskip
+    \baselineskip=0pt
+    \lineskip=0pt
+    \parsep=0pt
+    \headI=\head@height
+    \advance\headI-17pt
+    \begin{beamercolorbox}[wd=\paperwidth,ht=\headI,dp=10pt]{section in head}
+        \hfill\textbf{\insertframetitle\ }
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[wd=\paperwidth,ht=6pt,dp=5pt]{egi in head}
+        \vbox to 7pt{
+            \hsize=\wd\logobox
+            \vss\leavevmode\lower1pt\copy\logobox\par
+        }
+        \tiny\hskip1em EGI-InSPIRE
+    \end{beamercolorbox}
+}
+
+\defbeamertemplate*{footline}{egi theme} {
+    \leavevmode
+    \begin{beamercolorbox}[wd=\paperwidth,ht=8ex,dp=0ex]{date in foot}
+        \hfill \tiny
+        {\flushleft \quad \today \hfill \insertframenumber \quad \strut \\ \vspace{3pt} \quad EGI-InSPIRE RI-261323}
+        {\vspace{3pt} \hfill\hfill\hfill www.egi.eu\quad }
+    \end{beamercolorbox}
+}
+
+\setbeamercolor{normal text}{fg=egi_blueI}
+
+\setbeamercolor{alerted text}{fg=egi_blue!90!black}
+\setbeamerfont{alerted text}{series=\bfseries}
+
+\setbeamertemplate{itemize item}{{\color{egi_blue}$\bullet$}}
+\setbeamertemplate{itemize subitem}{{\color{egi_blue}\textbf{--}}}
+\setbeamertemplate{itemize subsubitem}{{\color{egi_blue}$\scriptstyle\blacktriangleright$}}
+
+\setbeamertemplate{background}{\ifnum\thepage=1\relax
+\includegraphics[height=\paperheight]{images/back.png}\fi}
+
+\newdimen\headP
+\setbeamertemplate{title page}{
+    \lineskip=0pt
+    \begin{beamercolorbox}[wd=\paperwidth,ht=\head@height,dp=5pt]{section in head}
+        \lower0pt\copy\logobox
+        \hskip1em\textbf{\huge \hfill EGI-InSPIRE }
+    \end{beamercolorbox}
+    \insertframetitle
+    \vskip\head@height
+    \hskip70pt\vbox to120pt{
+    \advance\hsize-70pt
+    \begin{raggedright}
+        \textbf{\Large\inserttitle}
+        \bigskip
+
+        \textit{\normalsize\insertauthor}
+
+    %\includegraphics[height=50pt]{images/csic.png}
+    %\quad
+    %\includegraphics[height=50pt]{images/ifca.png}
+    
+    \end{raggedright}
+    \vfill
+    }
+
+    \advance\hsize\beamer@rightmargin
+    
+    \hfill 
+    \includegraphics[height=20pt]{images/e-infra.png}
+    \quad
+    \includegraphics[height=20pt]{images/eu.png}
+    \quad\strut
+
+}
