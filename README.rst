@@ -1,5 +1,5 @@
 Beamer presentation template for EGI-InSPIRE
----------------------------------------------
+============================================
 
 This is a beamer template for EGI-InSPIRE presentations. It's based
 on the original EGI template (version 3) available from the following
@@ -12,8 +12,14 @@ downloaded from http://bitbucket.org/rivanvx/beamer/wiki/Home
 The template was based on the EGEE one by Gabriel ZAQUINE, that can
 be found in https://edms.cern.ch/document/964536/
 
-This template can be found here:
-  https://github.com/alvarolopez/egi_beamer_template
+The template can be found here:
+https://github.com/alvarolopez/egi_beamer_template
 
-Suggestions, problems?: aloga <at> ifca.unican.es
+Questions, bugs, suggestions
+============================
+Just drop me a line or open an issue on github.
+
+:Email: aloga <at> ifca.unican.es
+:Homepage: https://devel.ifca.es/~aloga/
+:On github: https://github.com/alvarolopez/egi_beamer_template
 
